@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Santa Cruz Pet Watch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<nav>
+<h1> Santa Cruz Pet Watch</h1>
+<a href="#report">Report a Pet</a>
+</nav>
+</header>
+
+<main>
+
+<section class="hero">
+<h2>Help Bring Pets Home </h2>
+<p>
+A community page for lost and found pets in Santa Cruz de la Sierra.
+</p>
+</section>
+
+<section class="reports">
+<h2>Lost & Found Pets</h2>
+<p class="section-text">
+Use the filters to find reports in your area.
+</p>
+
+<div class="filters">
+
+<div>
+<label for="status-filter">Status</label>
+<select id="status-filter">
+<option value="all">All</option>
+<option value="Lost">Lost</option>
+<option value="Found">Found</option>
+</select>
+</div>
+
+<div>
+<label for="area-filter">Area</label>
+<select id="area-filter">
+<option value="all">All Areas</option>
+<option value="Equipetrol">Equipetrol</option>
+<option value="Urubo">Urubo</option>
+<option value="Sirari">Sirari</option>
+<option value="Plan 3000">Plan 3000</option>
+</select>
+</div>
+
+</div>
+
+<div id="reports-container" class="pet-grid">
+<!-- Pet cards will be added by JavaScript -->
+</div>
+</section>
+
+<section id="report" class="report-form-section">
+
+<div class="form-container">
+
+<h2>Report a Pet </h2>
+
+<p>
+Fill out the form below to report a lost or found pet.
+</p>
+
+<form id="pet-form">
+
+<label for="pet-status">Status</label>
+<select id="pet-status" required>
+<option value="">Choose one</option>
+<option value="Lost">Lost</option>
+<option value="Found">Found</option>
+</select>
+
+<label for="image-url">Image URL</label>
+<input
+type="url"
+id="image-url"
+placeholder="https://example.com/image.jpg"
+required
+>
+
+<label for="area">Area</label>
+<select id="area" required>
+<option value="">Choose an area</option>
+<option value="Equipetrol">Equipetrol</option>
+<option value="Urubo">Urubo</option>
+<option value="Sirari">Sirari</option>
+<option value="Plan 3000">Plan 3000</option>
+</select>
+
+<label for="contact">Contact Info</label>
+<input
+type="text"
+id="contact"
+placeholder="Phone number or email"
+required
+>
+
+<label for="description">Description</label>
+<textarea
+id="description"
+rows="5"
+placeholder="Describe the pet..."
+required
+></textarea>
+
+<button type="submit">Submit Report </button>
+
+</form>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<p> Santa Cruz Pet Watch | Helping pets find their way home.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
